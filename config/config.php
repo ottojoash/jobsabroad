@@ -8,7 +8,7 @@ try{
     $pass = ""
 
     $conn = new PDO("mysql:host=$host;dbname=$dbname,$user,$pass");
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 }catch(PDOException $e){
     echo $e->getMessage();
